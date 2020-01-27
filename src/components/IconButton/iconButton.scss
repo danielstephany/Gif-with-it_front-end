@@ -1,0 +1,8 @@
+.icon-button {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    &:focus {
+        outline: none;
+    }
+}
