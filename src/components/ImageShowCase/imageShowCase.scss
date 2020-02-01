@@ -1,0 +1,22 @@
+.image-show-case {
+    margin: 32px 0;
+    position: relative;
+    &::before {
+        display: block;
+        background-color: rgba(0,0,0,0.2);
+        content: '';
+        position: absolute;
+        top: 8%;
+        bottom: 10%;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &__img {
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,10 @@
+.flex-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    &__stretched {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}

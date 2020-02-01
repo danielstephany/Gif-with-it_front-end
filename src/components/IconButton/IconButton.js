@@ -6,7 +6,7 @@ const IconButton = React.forwardRef(function iconButton(props, ref) {
         baseClass = "icon-button",
         classes = className ? baseClass + " " + className : baseClass;
 
-    return <button className={classes} {...others}>{children}</button>;
+    return <button className={classes} ref={ref} {...others}>{children}</button>;
 });
 
 export default IconButton;

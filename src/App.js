@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 import Search from './container/search/Search.js';
 import Header from './components/Header/Header.js';
 import { connect } from "react-redux";
+import Home from './views/Home';
+import Random from './views/Random';
+import {
+  HashRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 
 
@@ -12,12 +19,17 @@ class App extends Component {
   render = () => {
     const {userName, signedIn} = this.props;
     return (
-      <div className="App">
-        <Header userName={userName} signedIn={signedIn} />
-        <main>
-          <Search />
-        </main>
-      </div>
+      <Router>
+        <div className="flex-app">
+          <Header userName={userName} signedIn={signedIn} />
+          <main className="flex-app__stretched">
+            <Switch>
+              <Route exact path="/random" render={(props) => <Random />} />
+              <Route path="/" render={(props) => <Home />} />
+            </Switch>
+          </main>
+        </div>
+      </Router>
     );
   }
   

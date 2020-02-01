@@ -1,2 +1,6 @@
 $primary: #56b6c9;
-$secondary: #ff6600;
+$secondary: lighten($primary, 20%);
+
+$default-text: #484848;
+$text-primary: #fff;
+$text-secondary: #484848

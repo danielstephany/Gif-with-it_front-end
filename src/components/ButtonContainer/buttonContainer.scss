@@ -1,0 +1,12 @@
+.button-container {
+    display: block;
+    margin-top: 16px; 
+    margin-bottom: 4px;
+    text-align: left;
+    &__center {
+        text-align: center;
+    }
+    &__right {
+        text-align: right;
+    }
+}

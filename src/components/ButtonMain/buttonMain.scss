@@ -1,0 +1,18 @@
+@import '../_sharedStyles/colors.scss';
+
+.button-main {
+    border: 1px solid darken($primary, 10%);
+    border-radius: 4px;
+    background-color: $primary;
+    padding: 8px 16px;
+    color: $text-primary;
+    cursor: pointer;
+    text-decoration: none;
+    &:focus {
+        outline: none;
+    }
+    &--secondary {
+        background-color: $secondary;
+        color: $text-secondary;
+    }
+}
