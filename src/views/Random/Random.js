@@ -6,12 +6,15 @@ import ButtonMain from '@components/ButtonMain';
 
 const Random = (props) => {
     const [gifData, setGif] = useState();
+    const [loading, setLoading] = useState(false);
     let gif;
 
     const setRandom = () => {
+        setLoading(true);
         getRandomGif()
             .then(res => {
                 setGif(res);
+                setLoading(false);
             });
     }
 
@@ -23,14 +26,14 @@ const Random = (props) => {
 
 
     if (gifData){
-        gif = <ImageShowCase src={gifData.image_original_url} alt="this is a randomly loaded gif"/>
+        gif = <ImageShowCase loading={loading} src={gifData.image_original_url} alt="this is a randomly loaded gif"/>
     }
     
     return (
         <section>
             {gif ? gif : null}
             <ButtonContainer align="center" >
-                <ButtonMain onClick={setRandom}>Hit Me With a Rando</ButtonMain>
+                <ButtonMain loading={loading} onClick={setRandom}>Hit Me With a Rando</ButtonMain>
             </ButtonContainer>
         </section>
     );

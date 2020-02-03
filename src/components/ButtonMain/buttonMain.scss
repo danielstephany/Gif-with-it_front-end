@@ -1,6 +1,7 @@
 @import '../_sharedStyles/colors.scss';
 
 .button-main {
+    display: inline-block;
     border: 1px solid darken($primary, 10%);
     border-radius: 4px;
     background-color: $primary;
@@ -8,11 +9,16 @@
     color: $text-primary;
     cursor: pointer;
     text-decoration: none;
+    position: relative;
     &:focus {
         outline: none;
     }
     &--secondary {
         background-color: $secondary;
         color: $text-secondary;
+    }
+    &--loading {
+        overflow: hidden;
+        cursor: progress;
     }
 }

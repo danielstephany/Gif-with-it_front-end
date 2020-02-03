@@ -1,4 +1,6 @@
 .image-show-case {
+    display: flex;
+    justify-content: center;
     margin: 32px 0;
     position: relative;
     &::before {
@@ -12,11 +14,41 @@
         left: 0;
         z-index: 1;
     }
-    &__img {
+    &__placeholder {
+        background: rgba(255,255,255, 0.2);
         border-radius: 4px;
-        display: block;
+        display: inline-block;
         margin: 0 auto;
+        padding: 0;
         position: relative;
+        overflow: hidden;
         z-index: 2;
     }
+    &__img {
+        border-radius: 4px;
+        display: inline-block;
+        transition: 0.2s ease;
+        margin-bottom: -5px;
+    }
+    &--loading {
+        .image-show-case__img {
+            opacity: 0;
+        }
+        .image-show-case__placeholder::after {
+            content: "";
+            box-shadow: 0 0 32px 6px #fff;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 22;
+            animation: loadingScan 1s ease infinite alternate;
+        }
+    }
+}
+
+@keyframes loadingScan {
+  from {left: 0%}
+  to {left: 100%}
 }

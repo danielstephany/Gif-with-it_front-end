@@ -12,7 +12,7 @@ const Home = () => {
                     <small>You came to the right place to find the right gif for any occation.</small>
                 </h2>
                 <p>Get started with some random gifs</p>
-                <ButtonContainer>
+                <ButtonContainer align="center">
                     <ButtonMain routeLink to="/random">See Random Gifs</ ButtonMain>
                 </ ButtonContainer>
             </div>
