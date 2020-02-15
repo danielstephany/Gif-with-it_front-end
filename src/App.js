@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import Search from './container/search/Search.js';
+// import Search from './container/search/Search.js';
 import Header from './components/Header/Header.js';
 import { connect } from "react-redux";
 import Home from './views/Home';
 import Random from './views/Random';
+import Trending from './views/Trending';
 import {
   HashRouter as Router,
   Switch,
@@ -25,6 +26,7 @@ class App extends Component {
           <main className="flex-app__stretched">
             <Switch>
               <Route exact path="/random" render={(props) => <Random />} />
+              <Route exact path="/trending" render={(props) => <Trending />} />
               <Route path="/" render={(props) => <Home />} />
             </Switch>
           </main>

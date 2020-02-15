@@ -1,0 +1,13 @@
+.img-grid {
+    display: flex;
+    margin: 45px auto;
+    max-width: 900px;
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width:33.3%;
+    }
+    img {
+        width: 100%;
+    }
+}
