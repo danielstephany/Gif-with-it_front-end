@@ -1,0 +1,12 @@
+@import '../_sharedStyles/form-styles.scss';
+
+.rbui-base {
+    box-sizing: border-box;
+    display: block;
+    font-weight: 500;
+    font-size: $formLabelSize;
+    color: $formLabelColor;
+    &--inline {
+        display: inline-block;
+    }
+}

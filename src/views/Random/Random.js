@@ -3,6 +3,7 @@ import {getRandomGif} from '@store/actions/gifs';
 import ImageShowCase from '@components/ImageShowCase';
 import ButtonContainer from '@components/ButtonContainer';
 import ButtonMain from '@components/ButtonMain';
+import './random.scss';
 
 const Random = (props) => {
     const [gifData, setGif] = useState();
@@ -30,7 +31,7 @@ const Random = (props) => {
     }
     
     return (
-        <section>
+        <section className="view-random">
             {gif ? gif : null}
             <ButtonContainer align="center" >
                 <ButtonMain loading={loading} onClick={setRandom}>Hit Me With a Rando</ButtonMain>

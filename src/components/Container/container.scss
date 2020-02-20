@@ -1,0 +1,66 @@
+@import "../_sharedStyles/spacing.scss";
+@import "../_sharedStyles/breakpoints.scss";
+
+.rbui-container {
+    box-sizing: border-box;
+    display: block;
+    padding: 0 $gutter-spacing;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $screen-xl;
+    &--no-gutters {
+        padding: 0;
+        .flex-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &--stretch {
+        max-width: initial;
+    }
+    &--margin-0 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    &--margin-1 {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    &--margin-2 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    &--margin-3 {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    &--margin-4 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    &--margin-5 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &--margin-6 {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    &--margin-7 {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+    &--margin-8 {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    &--margin-9 {
+        margin-top: 36px;
+        margin-bottom: 36px;
+    }
+    &--margin-10 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,21 @@
+@import "../_sharedStyles/colors.scss";
+
+.rbui-textbox {
+    label {
+        box-sizing: border-box;
+        display: block;
+        font-weight: 500;
+        font-size: inherit;
+    }
+    &--fullwidth {
+        width: 100%;
+        input {
+            width: 100%;
+        }
+    }
+    .inline-error {
+        box-sizing: border-box;
+        color: $error;
+        font-size: 14px;
+    }
+}

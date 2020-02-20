@@ -1,0 +1,8 @@
+@import '../_sharedStyles/spacing.scss';
+
+.rbui-form {
+    box-sizing: border-box;
+    display: block;
+    margin-left: -$gutter-spacing;
+    margin-right: -$gutter-spacing;
+}

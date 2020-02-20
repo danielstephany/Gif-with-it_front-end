@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import Home from './views/Home';
 import Random from './views/Random';
 import Trending from './views/Trending';
+import SignUp from './views/SignUp';
+import SignIn from './views/SignIn';
 import {
   HashRouter as Router,
   Switch,
@@ -25,9 +27,11 @@ class App extends Component {
           <Header userName={userName} signedIn={signedIn} />
           <main className="flex-app__stretched">
             <Switch>
-              <Route exact path="/random" render={(props) => <Random />} />
-              <Route exact path="/trending" render={(props) => <Trending />} />
-              <Route path="/" render={(props) => <Home />} />
+              <Route exact path="/random" render={(props) => <Random {...props}/>} />
+              <Route exact path="/trending" render={(props) => <Trending {...props}/>} />
+              <Route exact path="/sign-in" render={(props) => <SignIn {...props}/>} />
+              <Route exact path="/sign-up" render={(props) => <SignUp {...props} />} />
+              <Route path="/" render={(props) => <Home {...props}/>} />
             </Switch>
           </main>
         </div>

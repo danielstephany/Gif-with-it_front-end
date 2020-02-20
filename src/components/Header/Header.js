@@ -22,8 +22,8 @@ const Header = (props) => {
           <nav className="gfn-main-header__nav">
             <Link to="/trending">Trending</Link>
             <Link to="/random">Random</Link>
-            {signedIn ? null : <a href="/sign-in">Sign in</a>}
-            {signedIn ? <a href="/sign-in">Sign in</a> : null}
+            {signedIn ? null : <Link to="/sign-up">Sign up</Link>}
+            {signedIn ? <button>logout</button> : <Link to="/sign-in">Sign in</Link>}
           </nav>
           <IconButton title="search" aria-label="search"><i className="fas fa-search"></i></IconButton>
         </div>

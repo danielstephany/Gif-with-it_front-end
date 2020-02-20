@@ -1,11 +1,12 @@
 .img-grid {
     display: flex;
-    margin: 45px auto;
-    max-width: 900px;
-    &__col {
+    margin: 16px auto;
+    width: 100%;
+    &__column {
         display: flex;
         flex-direction: column;
-        width:33.3%;
+        align-items: flex-start;
+        flex-basis:33.33%;
     }
     img {
         width: 100%;

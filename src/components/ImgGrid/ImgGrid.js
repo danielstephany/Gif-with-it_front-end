@@ -11,6 +11,7 @@ class ImgGrid extends Component {
             loading: false,
             columnArray: []
         }
+        this.columnkey = 0;
     }
 
     componentDidMount = () => {
@@ -39,7 +40,10 @@ class ImgGrid extends Component {
     }
 
     buildColumns = (columnData) => {
-        return columnData.map(col => <ImgGridColumn columnData={col} />);
+        return columnData.map(col => {
+            this.columnkey++;
+            return <ImgGridColumn key={this.columnkey} columnData={col} />
+        });
     }
 
     render = () => {

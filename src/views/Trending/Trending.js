@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {getTrending} from '@store/actions/gifs.js';
 import ImgGrid from '@components/ImgGrid';
+import Grid from '@components/Grid';
+import ViewHeader from '@components/ViewHeader';
 
 
 class Trending extends Component {
@@ -57,10 +59,15 @@ class Trending extends Component {
         }
 
         return (
-            <React.Fragment>
-                {loadingElement}
-                {displayElement}
-            </React.Fragment>
+            <Grid container>
+                <Grid row>
+                    <Grid col xs="12"sm="8" offsetSm="2">
+                        <ViewHeader>Trending</ViewHeader>
+                        {loadingElement}
+                        {displayElement}
+                    </Grid>
+                </Grid>
+            </Grid>
         )
     }
 }

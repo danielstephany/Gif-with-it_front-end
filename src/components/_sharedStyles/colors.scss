@@ -1,6 +1,33 @@
 $primary: #56b6c9;
+$primary-light: lighten($primary, 10%);
+$primary-dark: darken($primary, 10%);
+
 $secondary: lighten($primary, 20%);
+$secondary-light: lighten($secondary, 10%);
+$secondary-dark: darken($secondary, 10%);
 
 $default-text: #484848;
 $text-primary: #fff;
-$text-secondary: #484848
+$text-secondary: #484848;
+
+//tertiary
+$tertiary: #7997b2;
+$tertiary-light: lighten($tertiary, 10%);
+$tertiary-dark: darken($tertiary, 10%);
+
+$primary-bg: #fff;
+
+//backgrounds
+$background: #fff;
+$surface: #fff;
+$error: #ff0000;
+
+//type colors
+$onPrimary: #fff;
+$onSecondary: #fff;
+$onBackground: #333;
+$onSurface: #333;
+$onError: #fff;
+$typeGrey: #999;
+
+$borderGrey: #bbb;

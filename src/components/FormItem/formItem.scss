@@ -1,0 +1,34 @@
+@import '../_sharedStyles/spacing.scss';
+@import '../_sharedStyles/colors.scss';
+
+.rbui-form-item {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 $gutter-spacing;
+    margin-bottom: 18px;
+    vertical-align: top;
+    &--align-left {
+        text-align: left;
+    }
+    &--align-right {
+        text-align: right;
+    }
+    &--align-center {
+        text-align: center;
+    }
+    &--full-width {
+        display: block;
+        input {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.has-error {
+    input,
+    textarea {
+        border-color: $error;
+    }
+}

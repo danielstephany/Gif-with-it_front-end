@@ -1,0 +1,15 @@
+@import '../_sharedStyles/colors.scss';
+@import '../_sharedStyles/properties.scss';
+@import '../_sharedStyles/spacing.scss';
+
+.rbui-paper {
+    border-radius: $borderRadius;
+    box-sizing: border-box;
+    display: block;
+    background-color: $primary-bg;
+    box-shadow: $shadow;
+    padding: $container-padding;
+    &--no-padding {
+        padding: 0;
+    }
+}

@@ -1,5 +1,5 @@
 let initialState = {
-  signedIn: true,
+  signedIn: false,
   userName: "daniel",
   token: undefined,
 };

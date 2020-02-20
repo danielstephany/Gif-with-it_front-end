@@ -1,0 +1,16 @@
+@import './colors.scss';
+
+$formBorder: 1px solid $borderGrey;
+$formBorderRadius: 4px;
+$formPadding: 6px;
+$formMargin: 0 0 5px;
+$formItemWidth: 200px;
+$formFontSize: 16px;
+$formFontColor: $onBackground;
+$formLabelColor: $formFontColor;
+$formLabelSize: 14px;
+
+$checkboxSize: 20px;
+$radioSize: $checkboxSize;
+
+$selectBg: #fff;
