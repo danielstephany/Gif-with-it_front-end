@@ -13,6 +13,14 @@
             width: 100%;
         }
     }
+    &--inline {
+        label {
+            display: inline-block;
+        } 
+        input {
+            display: inline-block;
+        }
+    }
     .inline-error {
         box-sizing: border-box;
         color: $error;

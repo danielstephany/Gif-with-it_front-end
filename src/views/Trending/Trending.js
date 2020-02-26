@@ -36,6 +36,8 @@ class Trending extends Component {
             gifs = gifsArr.map(gif => {
                 if (gif && gif.images && gif.images.downsized_large){
                     return <img src={gif.images.downsized.url} alt="gif" />
+                } else {
+                    return null
                 }
             });
         } 

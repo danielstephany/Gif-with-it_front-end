@@ -12,7 +12,7 @@ const SignIn = (props) => {
             <Grid row>
                 <Grid col xs="12" sm="6" offsetSm="3" lg="4" offsetLg="4">
                     <Paper>
-                        <h2>Sign Up</h2>
+                        <h2>Sign In</h2>
                         <Grid row spacing="0">
                             <Grid col xs="12">
                                 <TextBox label="User Name" fullWidth />

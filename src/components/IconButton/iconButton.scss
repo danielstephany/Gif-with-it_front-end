@@ -1,10 +1,11 @@
 .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     box-shadow: none;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
-    &:focus {
-        outline: none;
-    }
+    vertical-align: center;
 }

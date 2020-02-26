@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-// import Search from './container/search/Search.js';
-import Header from './components/Header/Header.js';
+import Header from './containers/Header';
 import { connect } from "react-redux";
 import Home from './views/Home';
 import Random from './views/Random';
@@ -12,8 +11,9 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
-
+const appHistory = createBrowserHistory();
 
 class App extends Component {
   
@@ -22,9 +22,9 @@ class App extends Component {
   render = () => {
     const {userName, signedIn} = this.props;
     return (
-      <Router>
+      <Router history={appHistory}>
         <div className="flex-app">
-          <Header userName={userName} signedIn={signedIn} />
+          <Header userName={userName} signedIn={signedIn} history={appHistory}/>
           <main className="flex-app__stretched">
             <Switch>
               <Route exact path="/random" render={(props) => <Random {...props}/>} />

@@ -38,7 +38,6 @@ const SignUp = (props) => {
                                 </FormItem>
                             </Grid>
                         </Grid>
-
                     </Paper>
                 </Grid>
             </Grid>
