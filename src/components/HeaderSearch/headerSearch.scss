@@ -1,0 +1,48 @@
+@import "../_sharedStyles/colors.scss";
+@import "../_sharedStyles/spacing.scss";
+
+.header-search {
+    display: flex;
+    background-color: $primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+      animation: headerSearchAnimation 0.2s ease-out forwards;
+      opacity: 0;
+    &.unmouting {
+        animation: reverseHeaderSearchAnimation 0.2s ease-out forwards;
+        opacity: 0;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      flex-basis: 100%;
+      padding: 0 $container-padding;
+    }
+    .rbui-form-item {
+      margin-bottom: 0;
+      padding: 0;
+    }
+    label {
+      color: #fff;
+      font-size: 20px;
+      vertical-align: middle;
+    }
+    .icon-button {
+      font-size: 24px;
+    }
+}
+
+@keyframes headerSearchAnimation {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes reverseHeaderSearchAnimation {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
