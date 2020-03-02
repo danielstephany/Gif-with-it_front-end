@@ -7,7 +7,7 @@ import IconButton from '@components/IconButton';
 const HeaderSearch = React.forwardRef(function HeaderSearch(props, ref) {
     const [isUnmouting, setIsUnmounting] = useState(false),
         baseClase = 'header-search',
-        { close, submit, ...others} = props;
+        { close, submit, hide, ...others} = props;
     let classes = isUnmouting ? baseClase + ' unmouting' : baseClase,
         searchRef;
                 
@@ -23,6 +23,9 @@ const HeaderSearch = React.forwardRef(function HeaderSearch(props, ref) {
 
     useEffect(() => {
         searchRef.focus();
+        if(hide){
+            unmount();
+        }
     });
 
     return (

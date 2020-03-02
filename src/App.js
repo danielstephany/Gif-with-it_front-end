@@ -6,6 +6,7 @@ import Random from './views/Random';
 import Trending from './views/Trending';
 import SignUp from './views/SignUp';
 import SignIn from './views/SignIn';
+import Search from './views/Search';
 import {
   HashRouter as Router,
   Switch,
@@ -24,14 +25,15 @@ class App extends Component {
     return (
       <Router history={appHistory}>
         <div className="flex-app">
-          <Header userName={userName} signedIn={signedIn} history={appHistory}/>
+          <Route path="/" render={(props) => <Header userName={userName} signedIn={signedIn} {...props} />} />
           <main className="flex-app__stretched">
             <Switch>
               <Route exact path="/random" render={(props) => <Random {...props}/>} />
               <Route exact path="/trending" render={(props) => <Trending {...props}/>} />
               <Route exact path="/sign-in" render={(props) => <SignIn {...props}/>} />
               <Route exact path="/sign-up" render={(props) => <SignUp {...props} />} />
-              <Route path="/" render={(props) => <Home {...props}/>} />
+              <Route exact path="/search/:id" render={(props) => <Search {...props} />} />
+              <Route exact path="/" render={(props) => <Home {...props} />} />
             </Switch>
           </main>
         </div>
